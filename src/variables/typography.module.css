@@ -1,0 +1,21 @@
+:root {
+  --type-header-one: 3.2rem;
+  --type-header-two: 2.4rem;
+  --type-header-three: 2.0rem;
+  --type-header-four: 1.8rem;
+  --type-header-five: 1.4rem;
+  --type-header-six: 1.2rem;
+  --type-header-body-large: 1.2rem;
+  --type-header-body: 1rem;
+  --type-header-body-small: 0.9rem;
+  --type-header-metadata: 0.8rem;
+
+  --type-large: 2.4rem;
+  --type-medium: 1.4rem;
+  --type-regular: 1rem;
+  --type-small: 0.8rem;
+
+  --type-primary-font: Graphik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --type-secondary-font: Graphik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

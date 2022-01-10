@@ -1,0 +1,18 @@
+.presentationListCardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.presentationListCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  padding: 24px;
+}

@@ -1,0 +1,110 @@
+.slidePane {
+  position: fixed;
+  display: flex;
+  left: 0px;
+  top: 49px;
+  width: 200px;
+  height: calc(100% - 48px);
+  background-color: #ffffff;
+  border-right: 1px solid #ddd;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: scroll;
+  z-index: 999;
+}
+
+.slidePaneInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px;
+}
+.slidePaneInnerSlide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.slidePaneInnerSlide span {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+.slideNavContainer {
+    display: flex;
+    padding: 6px;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 112px;
+    max-width: 112px;
+    min-height: 64px;
+    max-height: 64px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border: 1px #e0e0e0 solid;
+    color: #aaaaaa;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 4px 14px 0px rgba(103, 110, 144, 0.05);
+    -moz-box-shadow: 0px 4px 14px 0px rgba(103, 110, 144, 0.05);
+    box-shadow: 0px 0px 3px 0px rgba(103, 110, 144, 0.1);
+  }
+  
+  .slideNavContainer > section > .slideNavContainer {
+    min-width: 0px;
+    min-height: 0px;
+    padding: 0px;
+    padding-left: 0px;
+    background-color: transparent;
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: none;
+    -webkit-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0);
+    -moz-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0);
+    box-shadow: 0px 0px 3px 0px rgba(103, 110, 144, 0);
+  }
+  
+  .slideNavContainer:hover {
+    box-shadow: 0px 3px 3px 0px rgba(103, 110, 144, 0.1);
+  }
+  
+  .slideNavContainer h1 {
+    font-size: 10px;
+    padding-bottom: 2px;
+  }
+  
+  .slideNavContainer h2 {
+    font-size: 7px;
+    padding-bottom: 2px;
+  }
+  
+  .slideNavContainer h3 {
+    font-size: 6px;
+    padding-bottom: 2px;
+  }
+  
+  .slideNavContainer h4 {
+    font-size: 5px;
+    padding-bottom: 1px;
+  }
+  
+  .slideNavContainer h5 {
+    font-size: 4px;
+    padding-bottom: 1px;
+  }
+  
+  .slideNavContainer p {
+    font-size: 4px;
+    line-height: 0.25rem;
+  }
+  
+  .slideNavContainer li {
+    font-size: 4px;
+  }
+  

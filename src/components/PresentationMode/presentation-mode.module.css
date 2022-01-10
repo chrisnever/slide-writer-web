@@ -1,0 +1,129 @@
+@import '../../variables/colours.module.css';
+@import '../../variables/typography.module.css';
+
+
+.slidePane{
+  display: flex;
+  flex-direction: row;
+}
+.presentationSlideHidden {
+  display: none;
+}
+
+.presentationSlide {
+  position: relative;
+  display: flex;
+  flex-shrink:0;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  padding: 24px;
+  padding-left: 128px;
+  width:100vw;
+  height: 100vh;
+  background-color:var(--color-white);
+  border: 1px #d2d8f3 solid;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0.05);
+  -moz-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0.05);
+  box-shadow: 0px 0px 3px 0px rgba(103, 110, 144, 0.1);
+  z-index: 999;
+}
+
+.presentationSlide > section > .presentationSlide {
+  min-width: 0px;
+  min-height: 0px;
+  padding: 0px;
+  padding-left: 0px;
+  background-color: transparent;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: none;
+  -webkit-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0);
+  -moz-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0);
+  box-shadow: 0px 0px 3px 0px rgba(103, 110, 144, 0);
+}
+
+section {
+  width: 100%;
+}
+
+.presentationSlide h1 {
+  max-width: 50%;
+  color: var(--color-grey-1);
+  font-family: var(--type-primary-font);
+  font-size: var(--type-header-one);
+  font-size: 4.2vw;
+  padding: 0.5rem 0rem;
+}
+
+.presentationSlide h2 {
+  color: var(--color-grey-3);
+  font-family: var(--type-primary-font);
+  font-size: var(--type-header-two);
+  font-weight: 500;
+  padding: 0.5rem 0rem;
+}
+
+.presentationSlide h3 {
+  color: var(--color-grey-3);
+  font-family: var(--type-primary-font);
+  font-size: var(--type-header-three);
+  font-weight: 400;
+  padding: 0.5rem 0rem;
+}
+
+.presentationSlide h4 {
+  color: var(--color-grey-3);
+  font-family: var(--type-primary-font);
+  font-size: var(--type-header-four);
+  font-weight: 400;
+  padding: 0.5rem 0rem;
+}
+
+.presentationSlide h5 {
+  color: #8c97a3;
+  font-family: var(--type-primary-font);
+  font-size: var(--type-header-five);
+  font-weight: 400;
+  padding: 0.5rem 0rem;
+}
+
+.presentationSlide h6 {
+  color: #8c97a3;
+  font-family: var(--type-primary-font);
+  font-size: var(--type-header-six);
+  padding: 0.5rem 0rem;
+  font-weight: 200;
+}
+
+.presentationSlide p {
+  max-width: 50%;
+  color: var(--color-grey-1);
+  font-size: var(--type-body);
+  font-size: var(--type-body-large);
+  padding: 0.5rem 0rem;
+  line-height: 154%;
+
+}
+
+.presentationSlide ul {
+  font-family: var(--type-primary-font);
+  padding: 0.5rem 1rem;
+
+}
+
+.presentationSlide li {
+  font-size: var(--type-body);
+  padding-bottom: 12px;
+}
+
+.presentationSlide img {
+  float:right;
+  align-self: flex-end;
+}
+
+

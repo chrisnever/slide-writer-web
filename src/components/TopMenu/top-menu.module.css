@@ -1,0 +1,91 @@
+@import '../../variables/colours.module.css';
+@import '../../variables/typography.module.css';
+
+
+.topMenu {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0px;
+    width: 100%;
+    padding: 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    max-height: 48px;
+    height: 48px;
+    background-color:var(--color-light-grey);
+    z-index: 10;
+  }
+  .topMenuLeft {
+    width: 282px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    row-gap: 8px;
+  }
+  .topMenuCenter {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    row-gap: 8px;
+  }
+  .topMenuRight {
+    width: 282px;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    gap: 8px;
+    row-gap: 8px;
+  }
+  .topMenuRight span {
+    font-family: var(--type-primary-font);
+    font-size: var(--type-header-metadata);
+
+  }
+  .topMenuButton {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    height: 28px;
+    gap: 8px;
+    row-gap: 8px;
+    border: 1px transparent solid;
+    border-radius: 4px;
+    background-color:var(--color-light-grey);
+  }
+  .topMenuButton:hover {
+    border: 1px #e9e9e9 solid;
+    border-radius: 4px;
+    background-color:var(--color-button-hover);
+    color:var(--color-blue);
+  }
+
+  .topMenuNavButton {
+    font-family: var(--type-primary-font);
+    font-size: var(--type-small);
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border: 1px #e9e9e9 solid;
+    border-radius: 48px;
+    height: 28px;
+    padding: 0px 16px;
+    gap: 8px;
+    row-gap: 8px;
+    background-color:var(--color-light-grey);
+    color: #aaaaaa;
+  }
+  .topMenuNavButton:hover {
+    background-color:var(--color-button-hover);
+    color:var(--color-blue);
+  }
+  .isActive {
+    color:var(--color-blue);
+  }
+  
+  
