@@ -1,14 +1,28 @@
 import React from 'react'
 import { useOutletContext } from 'react-router-dom'
+import TextEditor from '../textEditor/TextEditor'
+import SlideEditor from '../slideEditor/slideEditor'
+
 
 const SplitEditor = () => {
-  const [document] = useOutletContext()
+  const [
+    document,
+    serialisedText,
+    setSerialisedText,
+    rawData,
+    setRawData
+  ] = useOutletContext()
 
   return (
     <div style={{ paddingTop: '48px' }}>
-      <h1>Split Editor</h1>
-      <p style={{paddingTop: "68px"}}>{document.name}</p>
-
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <div style={{ width: '50%', height: '100vh', overflowY: 'scroll' }}>
+        <TextEditor handleMarkdownUpdate={serialisedText}  />
+      </div>
+      <div style={{ width: '50%', height: '100vh', overflowY: 'scroll' }}>
+        <SlideEditor serialisedText={serialisedText} />
+      </div>
+    </div>
     </div>
   )
 }

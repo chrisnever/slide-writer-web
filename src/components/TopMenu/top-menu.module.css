@@ -46,10 +46,11 @@
   }
   .topMenuButton {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     align-items: center;
     height: 28px;
+    min-width: 26px;
     gap: 8px;
     row-gap: 8px;
     border: 1px transparent solid;

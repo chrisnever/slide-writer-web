@@ -1,27 +1,5 @@
-.app{
-    background-color: #f2f2f2;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-  }
-  
-  .appContent {
-    position: fixed;
-    background-color: #fff;
-    border-radius: 12px;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    margin-top: 48px;
-    border: 1px #e9e9e9 solid;
-    overflow: hidden;
-    overflow-y: scroll;
-    -webkit-app-region: no-drag;
-  }
-  
-  .containerMain{
-    padding: 62px;
-  }
+@import '../../variables/colours.module.css';
+@import '../../variables/typography.module.css';
   
   .fullPane {
     position: relative;
@@ -32,7 +10,7 @@
     flex-direction: row;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--background-white)
   }
   
   .editorPane {

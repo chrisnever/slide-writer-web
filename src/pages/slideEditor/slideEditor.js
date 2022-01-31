@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useOutletContext } from 'react-router-dom'
 
 //components
@@ -9,16 +9,21 @@ import styles from './slide-editor.module.css'
 
 //need to move this to it's own slide container file
 const SlideEditor = () => {
-  const [document] = useOutletContext()
+  const [
+    document,
+    serialisedText,
+    setSerialisedText,
+    rawData,
+    setRawData
+  ] = useOutletContext()
 
   return (
     <div>
       <div className={styles.containerMain}>
-        <h1>Slide Editor</h1>
-        <p style={{ paddingTop: '68px' }}>{document.name}</p>
+        <p style={{ paddingTop: '0px' }}>{document.name}</p>
         <div className={styles.fullPane}>
           <div className={styles.slidesContainer}>
-            <Slides serialisedText={document.markdownData} />
+            <Slides serialisedText={serialisedText} />
           </div>
         </div>
       </div>

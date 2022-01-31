@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 import { useOutletContext } from 'react-router-dom'
 
-// slate
+// Slate imports
 import { createEditor, Editor, Transforms, Text } from 'slate'
 
 // Import the Slate components and React plugin.
@@ -111,40 +111,21 @@ const Leaf = props => {
 const TextEditor = () => {
   const [
     document,
-    handleMarkdownUpdate,
-    handleRawDataUpdate
+    serialisedText,
+    setSerialisedText,
+    rawData,
+    setRawData
   ] = useOutletContext()
+
   const editor = useMemo(() => withReact(createEditor()), [])
-  const [serialisedText, setSerialisedText] = useState()
-
-  console.log(document.rawData)
-
-  const [valueTwo, setValueTwo] = useState(
-    //JSON.parse(localStorage.getItem('contentTwo'))
-    document.rawData || [
-      {
-        type: 'paragraph',
-        children: [{ text: 'A line of text in a paragraph.' }]
-      }
-    ]
-  )
-
-  // Update the initial content to be pulled from Local Storage if it exists.
-  const [slideTextRawData, setSlideTextRawData] = useState(
-    deserialize(localStorage.getItem('testSerial')) ||
-      deserialize('test content')
-  )
+  const [value, setValue] = useState(rawData)
 
   useEffect(() => {
-    setSerialisedText(slideTextRawData.map(n => Node.string(n)).join('\n'))
-  }, [slideTextRawData])
-
-  //creates the serialised text and sends it up with handlemarkdownupdate
-  useEffect(() => {
-    handleMarkdownUpdate(serialisedText)
-    handleRawDataUpdate(valueTwo)
-  }, [serialisedText]) //
-
+    setSerialisedText(value.map(n => Node.string(n)).join('\n'))
+    setRawData(value)
+  }, [value])
+ 
+ 
   // code style element
   const renderElement = useCallback(props => {
     switch (props.element.type) {
@@ -177,21 +158,18 @@ const TextEditor = () => {
           <div className={styles.editorPaneInner}>
             <Slate
               editor={editor}
-              value={valueTwo}
+              value={value}
               onChange={value => {
                 //set json value
-                setValueTwo(value)
-                setSlideTextRawData(value)
+                setValue(value)
                 const isAstChange = editor.operations.some(
                   op => 'set_selection' !== op.type
                 )
                 if (isAstChange) {
                   // Serialize the value and save the string value to Local Storage.
                   localStorage.setItem('content', serialize(value))
-                  localStorage.setItem('testSerial', serialize(value))
                   //store in json format
-                  const content = JSON.stringify(value)
-                  localStorage.setItem('contentTwo', content)
+                  
                 }
               }}
             >

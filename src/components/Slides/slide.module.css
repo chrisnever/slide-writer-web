@@ -16,13 +16,13 @@
   min-height: 540px;
   max-height: 540px;
   background-color:var(--color-white);
-  border: 1px #d2d8f3 solid;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  border-radius: 2px;
-  -webkit-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0.05);
-  -moz-box-shadow: 0px 4px 14px 0px rgba(49, 42, 120, 0.05);
-  box-shadow: 0px 0px 3px 0px rgba(103, 110, 144, 0.1);
+  border: 1px #F4F6F8 solid;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  -webkit-box-shadow:  0px 0px 68px 0px rgba(103, 110, 144, 0.05);
+  -moz-box-shadow:  0px 0px 68px 0px rgba(103, 110, 144, 0.05);
+  box-shadow: 0px 0px 68px 0px rgba(103, 110, 144, 0.05);
 }
 
 .slide > section > .slide {

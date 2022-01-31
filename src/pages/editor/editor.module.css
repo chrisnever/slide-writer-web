@@ -1,0 +1,7 @@
+@import '../../variables/colours.module.css';
+@import '../../variables/typography.module.css';
+@import '../../variables/atoms.module.css';
+
+.container {
+  padding: var(--xxl);
+}

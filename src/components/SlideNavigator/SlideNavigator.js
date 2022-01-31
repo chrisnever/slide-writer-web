@@ -1,9 +1,11 @@
-import React, { useState, useMemo, useCallback, Component } from 'react'
+import React from 'react'
 import { PlusIcon } from '@radix-ui/react-icons'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion' 
 import ReactMarkdown from 'react-markdown'
 import rehypeWrap from 'rehype-wrap-all'
 import remarkSectionize from 'remark-sectionize'
+
+//styles
 import styles from './slide-navigator.module.css'
 
 //Slide preview component
