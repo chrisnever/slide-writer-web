@@ -20,14 +20,6 @@ import './App.css'
 function App () {
   const { user, authIsReady } = useAuthContext()
 
-  //testing need to figure out where to put state - probably firebase...
-  const [serialisedText, setSerialisedText] = useState(' # test')
-  const handleMarkdownUpdate = val => {
-    setSerialisedText(val)
-    //testing upload data
-    console.log(serialisedText)
-  }
-
   return (
     <div className='App'>
       {authIsReady && (
@@ -36,7 +28,7 @@ function App () {
             <Route path="editor/:id/*" element={user ? <Editor /> : <Login />} >
               <Route index element={<TextEditor />} />
               <Route path="edit-text" element={<TextEditor />}></Route>
-              <Route path="edit-slides" element={<SlideEditor serialisedText={serialisedText}/>}></Route>
+              <Route path="edit-slides" element={<SlideEditor />}></Route>
               <Route path="edit-text+slides" element={<SplitEditor />}></Route>
             </Route>
             <Route path='/login' element={user ? <Dashboard /> : <Login />} />

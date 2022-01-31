@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useAuthContext } from '../../hooks/useAuthContext'
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -17,11 +18,13 @@ const TopMenu = ({
   handleToggleSidePanel,
   handleTogglePresentationMode,
   props,
-  data
+  userData
 }) => {
   let activeStyle = {
     color: 'var(--color-blue)'
   }
+  const { user } = useAuthContext()
+
   return (
     <div className={styles.topMenu}>
       <div className={styles.topMenuLeft}>
@@ -31,7 +34,9 @@ const TopMenu = ({
         <button className={styles.topMenuButton}>
           <ArrowLeftIcon />
         </button>
-
+        <button className={styles.topMenuButton}>
+        <span>{user.displayName}</span>
+        </button>
         <button className={styles.topMenuButton}>
           <ArrowRightIcon />
         </button>

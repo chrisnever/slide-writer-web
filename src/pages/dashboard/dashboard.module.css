@@ -1,0 +1,25 @@
+@import '../../variables/colours.module.css';
+@import '../../variables/typography.module.css';
+@import '../../variables/atoms.module.css';
+
+.dashboard {
+  background-color: var(--background-white);
+  width: 100vw;
+  height: 100vh;
+}
+
+.dashboardProjectContainer {
+  padding: var(--xl) var(--xxl);
+}
+
+.dashboardHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboardHeaderButtonContainer {
+  display: flex;
+  gap: 24px;
+}
