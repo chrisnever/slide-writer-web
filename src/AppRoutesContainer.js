@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 //Pages
@@ -10,14 +10,9 @@ import TextEditor from './pages/textEditor/TextEditor'
 import SlideEditor from './pages/slideEditor/slideEditor'
 import SplitEditor from './pages/splitEditor/SplitEditor'
 
-import TopMenu from './components/TopMenu/TopMenu'
-
 import { useAuthContext } from './hooks/useAuthContext'
 
-//Styles
-import './App.css'
-
-function App () {
+function AppRoutesContainer () {
   const { user, authIsReady } = useAuthContext()
 
   return (
@@ -29,7 +24,7 @@ function App () {
               <Route index element={<TextEditor />} />
               <Route path="edit-text" element={<TextEditor />}></Route>
               <Route path="edit-slides" element={<SlideEditor />}></Route>
-              <Route path="edit-text+slides" element={<SplitEditor />}></Route>
+              <Route path="edit-text-slides" element={<SplitEditor />}></Route>
             </Route>
             <Route path='/login' element={user ? <Dashboard /> : <Login />} />
             <Route path='/signup' element={user ? <Dashboard /> : <SignUp />} />
@@ -41,4 +36,4 @@ function App () {
   )
 }
 
-export default App
+export default AppRoutesContainer

@@ -10,6 +10,8 @@
 
 .dashboardProjectContainer {
   padding: var(--xl) var(--xxl);
+  max-width: 1128px;
+  margin: 0px auto;
 }
 
 .dashboardHeader {
@@ -17,6 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: var(--lg);
 }
 
 .dashboardHeaderButtonContainer {

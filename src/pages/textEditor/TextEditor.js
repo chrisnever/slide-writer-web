@@ -6,14 +6,11 @@ import React, {
   Component
 } from 'react'
 import { useOutletContext } from 'react-router-dom'
-
 // Slate imports
 import { createEditor, Editor, Transforms, Text } from 'slate'
-
 // Import the Slate components and React plugin.
 import { Slate, Editable, withReact } from 'slate-react'
 import { Node } from 'slate'
-
 //styles
 import styles from './text-editor.module.css'
 
@@ -107,7 +104,7 @@ const Leaf = props => {
   )
 }
 
-//MAIN COMPONENT
+//MAIN COMPONENT HERE!!!!
 const TextEditor = () => {
   const [
     document,
@@ -123,6 +120,11 @@ const TextEditor = () => {
   useEffect(() => {
     setSerialisedText(value.map(n => Node.string(n)).join('\n'))
     setRawData(value)
+  }, [value])
+
+   // delete after test, checking data updates
+   useEffect(() => {
+    console.log(value)
   }, [value])
  
  

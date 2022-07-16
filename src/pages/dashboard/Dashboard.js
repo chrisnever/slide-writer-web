@@ -21,19 +21,20 @@ const Dashboard = () => {
   const createNewDocument = () => {
     const createdBy = {
       displayName: user.displayName,
-      id: user.uid
+      id: user.uid,
     }
-
+    const imageUrl = "https://images.unsplash.com/photo-1464802686167-b939a6910659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2350&q=80"
     const presentation = {
       name,
       createdBy,
-      rawData:[
+      imageUrl,
+      rawData: [
         {
           type: 'paragraph',
           children: [{ text: 'Start writing your latest presentation.' }]
         }
       ]
-      
+
     }
     console.log(presentation)
     // add the document
@@ -58,9 +59,6 @@ const Dashboard = () => {
         </div>
         {error && <p>{error}</p>}
         {documents && <PresentationList presentations={documents} />}
-        <h3 style={{ textTransform: 'capitalize' }}>
-            Shared presentations
-          </h3>
       </div>
     </div>
   )
