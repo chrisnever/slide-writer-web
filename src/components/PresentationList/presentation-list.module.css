@@ -5,22 +5,28 @@
 .presentationListCardContainer {
   display: flex;
   flex-direction: row;
+  gap: 32px;
   flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
+  flex-grow: 2;
+  justify-content:flex-start;
   margin-bottom: 24px;
 }
 
 .presentationListCard {
-  background-color: var(--color-white);
   display: flex;
-  flex: 1 0 calc(25% - 12px);
+  flex: 1 0 calc(33.33333333% - 22px);
+  flex-grow: unset;
   flex-direction: column;
   text-decoration: none;
-  border: 1px solid var(--color-grey-7);
-  border-radius: 8px;
-  padding: 24px;
   overflow:visible;
+}
+
+.PresentationListImage{
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 2px;
 }
 
 .presentationListCard h4 {
@@ -28,6 +34,7 @@
   color: var(--color-grey-1);
   font-size: 1rem;
   font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .presentationListCard p {

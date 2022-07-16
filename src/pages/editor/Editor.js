@@ -46,6 +46,11 @@ const Editor = () => {
       })
   }, [])
 
+  // delete after test, checking data updates
+  useEffect(() => {
+  console.log(rawData)
+}, [rawData])
+
   //Toggle side panel
   const handleToggleSidePanel = () => setShowSlidePanel(!showSlidePanel)
   //Activate presentation mode
@@ -60,7 +65,9 @@ const Editor = () => {
     const documentRef = doc(projectFirestore, 'projects', id)
     updateDoc(documentRef, {
       markdownData: serialisedText,
-      rawData: rawData
+      rawData: rawData,
+      // when file is saved add modified date stamp
+      modifiedDate: new Date()
     })
   }
   // errors
